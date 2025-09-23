@@ -44,8 +44,10 @@ Arquitetura
 - Minimal API (NeoMoto.Api) + Domain (entidades) + Infrastructure (EF Core SQLite, DbContext).
 - Justificativa: simplicidade, performance, menor boilerplate, boa extensão via endpoints.
 
-Integrantes
-- Preencha aqui os nomes dos integrantes do grupo.
+Integrantes 
+- Afonso Correia Pereira - RM557863
+- Adel Mouhaidly - RM557705
+- Tiago Augusto Desiderato - RM558485
 
 Publicação
 - Inicie o repositório git e publique no GitHub:
