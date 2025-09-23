@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0KtDjLFM2VItIylTtlWOdIJKP3JwmGPFYENx05t206M=",
+  "Source": "NeoMoto.Api",
+  "BasePath": "_content/NeoMoto.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NeoMoto.Domain/1.0.0": {
+        "runtime": {
+          "NeoMoto.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NeoMoto.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
