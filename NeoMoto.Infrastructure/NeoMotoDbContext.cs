@@ -31,7 +31,6 @@ public class NeoMotoDbContext : DbContext
 			.HasForeignKey(m => m.MotoId)
 			.OnDelete(DeleteBehavior.Cascade);
 
-		// Seed básico
 		var filialA = new Filial { Id = Guid.NewGuid(), Nome = "Filial Centro", Endereco = "Rua A, 100", Cidade = "São Paulo", Uf = "SP" };
 		var filialB = new Filial { Id = Guid.NewGuid(), Nome = "Filial Zona Sul", Endereco = "Av. B, 200", Cidade = "São Paulo", Uf = "SP" };
 

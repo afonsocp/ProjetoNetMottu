@@ -9,3 +9,15 @@ C:\Users\afons\Desktop\projeto.net\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domai
 C:\Users\afons\Desktop\projeto.net\NeoMoto.Domain\obj\Debug\net8.0\refint\NeoMoto.Domain.dll
 C:\Users\afons\Desktop\projeto.net\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.pdb
 C:\Users\afons\Desktop\projeto.net\NeoMoto.Domain\obj\Debug\net8.0\ref\NeoMoto.Domain.dll
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\bin\Debug\net8.0\NeoMoto.Domain.deps.json
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\bin\Debug\net8.0\NeoMoto.Domain.dll
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\bin\Debug\net8.0\NeoMoto.Domain.pdb
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.AssemblyInfoInputs.cache
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.AssemblyInfo.cs
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.sourcelink.json
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.dll
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\refint\NeoMoto.Domain.dll
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\NeoMoto.Domain.pdb
+C:\Users\user\Documents\ProjetoNet\ProjetoNetMottu\NeoMoto.Domain\obj\Debug\net8.0\ref\NeoMoto.Domain.dll

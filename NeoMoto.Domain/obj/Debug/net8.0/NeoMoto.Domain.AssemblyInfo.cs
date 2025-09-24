@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NeoMoto.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c451e49b5205b2ced5394de9cc90ba3b23510b10")]
 [assembly: System.Reflection.AssemblyProductAttribute("NeoMoto.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NeoMoto.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,11 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using NeoMoto.Domain.Entities;
 using NeoMoto.Infrastructure;
 using Swashbuckle.AspNetCore.Filters;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Services
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.PropertyNamingPolicy = null;
+});
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -21,22 +25,19 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddSwaggerExamplesFromAssemblyOf<NeoMoto.Api.CreateFilialExample>();
 
 builder.Services.AddDbContext<NeoMotoDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
 var app = builder.Build();
 
-// Middleware
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// Ensure database is created and migrated
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<NeoMotoDbContext>();
     db.Database.Migrate();
 }
 
-// Helpers
 object BuildPaginationLinks(HttpContext http, int pageNumber, int pageSize, int totalCount)
 {
     var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
@@ -57,32 +58,35 @@ object BuildPaginationLinks(HttpContext http, int pageNumber, int pageSize, int 
     };
 }
 
-// Filiais endpoints
 app.MapGet("/api/filiais", async (NeoMotoDbContext db, HttpContext http, int pageNumber = 1, int pageSize = 10) =>
 {
     if (pageNumber < 1 || pageSize < 1 || pageSize > 100) return Results.BadRequest("Parâmetros de paginação inválidos.");
     var query = db.Filiais.AsNoTracking().OrderBy(f => f.Nome);
     var total = await query.CountAsync();
     var items = await query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+    var itemsList = items.Select(f => new
+    {
+        f.Id,
+        f.Nome,
+        f.Endereco,
+        f.Cidade,
+        f.Uf,
+        _links = new
+        {
+            self = $"/api/filiais/{f.Id}",
+            motos = $"/api/filiais/{f.Id}/motos"
+        }
+    }).ToList();
+    
     var result = new
     {
-        items = items.Select(f => new
-        {
-            f.Id,
-            f.Nome,
-            f.Endereco,
-            f.Cidade,
-            f.Uf,
-            _links = new
-            {
-                self = $"/api/filiais/{f.Id}",
-                motos = $"/api/filiais/{f.Id}/motos"
-            }
-        }),
+        items = itemsList,
         totalCount = total,
         _links = BuildPaginationLinks(http, pageNumber, pageSize, total)
     };
-    return Results.Ok(result);
+    
+    var json = JsonSerializer.Serialize(result);
+    return Results.Content(json, "application/json");
 })
 .WithName("GetFiliais")
 .WithOpenApi();
@@ -100,7 +104,7 @@ app.MapGet("/api/filiais/{id:guid}", async Task<IResult> (NeoMotoDbContext db, G
         filial.Uf,
         _links = new { self = $"/api/filiais/{filial.Id}", motos = $"/api/filiais/{filial.Id}/motos" }
     };
-    return Results.Ok(body);
+    return Results.Json(body);
 })
 .WithName("GetFilialById")
 .WithOpenApi();
@@ -149,12 +153,11 @@ app.MapGet("/api/filiais/{id:guid}/motos", async (NeoMotoDbContext db, Guid id) 
     var exists = await db.Filiais.AnyAsync(f => f.Id == id);
     if (!exists) return Results.NotFound();
     var motos = await db.Motos.AsNoTracking().Where(m => m.FilialId == id).ToListAsync();
-    return Results.Ok(motos.Select(m => new { m.Id, m.Placa, m.Modelo, m.Ano, _links = new { self = $"/api/motos/{m.Id}" } }));
+    return Results.Json(motos.Select(m => new { m.Id, m.Placa, m.Modelo, m.Ano, _links = new { self = $"/api/motos/{m.Id}" } }));
 })
 .WithName("GetMotosByFilial")
 .WithOpenApi();
 
-// Motos endpoints
 app.MapGet("/api/motos", async (NeoMotoDbContext db, HttpContext http, int pageNumber = 1, int pageSize = 10) =>
 {
     if (pageNumber < 1 || pageSize < 1 || pageSize > 100) return Results.BadRequest("Parâmetros de paginação inválidos.");
@@ -175,7 +178,7 @@ app.MapGet("/api/motos", async (NeoMotoDbContext db, HttpContext http, int pageN
         totalCount = total,
         _links = BuildPaginationLinks(http, pageNumber, pageSize, total)
     };
-    return Results.Ok(result);
+    return Results.Json(result);
 })
 .WithName("GetMotos")
 .WithOpenApi();
@@ -193,7 +196,7 @@ app.MapGet("/api/motos/{id:guid}", async Task<IResult> (NeoMotoDbContext db, Gui
         moto.FilialId,
         _links = new { self = $"/api/motos/{moto.Id}", filial = $"/api/filiais/{moto.FilialId}", manutencoes = $"/api/motos/{moto.Id}/manutencoes" }
     };
-    return Results.Ok(body);
+    return Results.Json(body);
 })
 .WithName("GetMotoById")
 .WithOpenApi();
@@ -255,12 +258,11 @@ app.MapGet("/api/motos/{id:guid}/manutencoes", async (NeoMotoDbContext db, Guid 
         totalCount = total,
         _links = BuildPaginationLinks(http, pageNumber, pageSize, total)
     };
-    return Results.Ok(result);
+    return Results.Json(result);
 })
 .WithName("GetManutencoesByMoto")
 .WithOpenApi();
 
-// Manutenções endpoints
 app.MapGet("/api/manutencoes", async (NeoMotoDbContext db, HttpContext http, int pageNumber = 1, int pageSize = 10) =>
 {
     if (pageNumber < 1 || pageSize < 1 || pageSize > 100) return Results.BadRequest("Parâmetros de paginação inválidos.");
@@ -273,7 +275,7 @@ app.MapGet("/api/manutencoes", async (NeoMotoDbContext db, HttpContext http, int
         totalCount = total,
         _links = BuildPaginationLinks(http, pageNumber, pageSize, total)
     };
-    return Results.Ok(result);
+    return Results.Json(result);
 })
 .WithName("GetManutencoes")
 .WithOpenApi();
@@ -283,7 +285,7 @@ app.MapGet("/api/manutencoes/{id:guid}", async Task<IResult> (NeoMotoDbContext d
     var m = await db.Manutencoes.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
     if (m == null) return Results.NotFound();
     var body = new { m.Id, m.MotoId, m.Data, m.Descricao, m.Custo, _links = new { self = $"/api/manutencoes/{m.Id}", moto = $"/api/motos/{m.MotoId}" } };
-    return Results.Ok(body);
+    return Results.Json(body);
 })
 .WithName("GetManutencaoById")
 .WithOpenApi();

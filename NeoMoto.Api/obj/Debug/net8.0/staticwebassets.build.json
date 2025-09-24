@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "0KtDjLFM2VItIylTtlWOdIJKP3JwmGPFYENx05t206M=",
-  "Source": "NeoMoto.Api",
-  "BasePath": "_content/NeoMoto.Api",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"+dt6ExOuGp91L7KVkiNqDYvlxVmxxXJZ5LVc/6jINyE=","Source":"NeoMoto.Api","BasePath":"_content/NeoMoto.Api","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
