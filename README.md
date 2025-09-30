@@ -1,5 +1,11 @@
 # NeoMoto API
 
+## **Membros**
+
+- Afonso Correia Pereira - RM557863
+- Adel Mouhaidly - RM557705
+- Tiago Augusto Desiderato - RM558485
+
 ## Descrição
 
 NeoMoto é uma API RESTful para gestão da frota da Mottu (motos), organizada por filiais e com histórico de manutenções. Desenvolvida com .NET 9 Minimal API e PostgreSQL.
