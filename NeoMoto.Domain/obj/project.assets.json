@@ -8,24 +8,31 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Afonso\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
       "projectName": "NeoMoto.Domain",
-      "projectPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
+      "packagesPath": "C:\\Users\\Afonso\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Afonso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -44,7 +51,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -65,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

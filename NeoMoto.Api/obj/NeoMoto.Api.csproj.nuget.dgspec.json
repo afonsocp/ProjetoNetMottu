@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj": {}
+    "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj": {
+    "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj",
         "projectName": "NeoMoto.Api",
-        "projectPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Api\\obj\\",
+        "projectPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Api\\NeoMoto.Api.csproj",
+        "packagesPath": "C:\\Users\\Afonso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Afonso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj"
+              "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj"
               }
             }
           }
@@ -42,12 +48,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Asp.Versioning.Http": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.20, )"
@@ -57,6 +67,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[3.0.1, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -90,26 +108,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj": {
+    "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
         "projectName": "NeoMoto.Domain",
-        "projectPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj",
+        "packagesPath": "C:\\Users\\Afonso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Afonso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -128,7 +152,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -149,34 +173,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj": {
+    "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj",
         "projectName": "NeoMoto.Infrastructure",
-        "projectPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Infrastructure\\NeoMoto.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Afonso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Afonso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\Documents\\ProjetoNet\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj"
+              "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj": {
+                "projectPath": "C:\\Users\\Afonso\\Desktop\\.net\\ProjetoNetMottu\\NeoMoto.Domain\\NeoMoto.Domain.csproj"
               }
             }
           }
@@ -191,7 +221,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -228,7 +258,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

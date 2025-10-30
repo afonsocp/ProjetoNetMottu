@@ -316,3 +316,26 @@ ProjetoNetMottu/
 1. Verifique se PostgreSQL está rodando: `docker-compose ps`
 2. Verifique logs: `docker-compose logs postgres`
 3. Reaplique migrations: `dotnet ef database update --project NeoMoto.Infrastructure --startup-project NeoMoto.Api`
+
+## Segurança, Versionamento e Health Checks
+
+- Endpoints públicos: `/health`, `/health/ready`, `/swagger/*`
+- Endpoints protegidos exigem header: `X-API-KEY: dev-secret-key`
+- Versão da API: usar `?api-version=1.0` ou header `x-api-version: 1.0`
+
+## Endpoint ML.NET
+
+- `POST /api/ml/predict` (protegido) — estima custo de manutenção a partir de features:
+
+```
+{
+  "ageYears": 3,
+  "daysSinceLastService": 60,
+  "serviceType": 1
+}
+```
+
+## Executando Testes
+
+- Rodar todos os testes: `dotnet test`
+- Inclui testes de integração (WebApplicationFactory) e unitário (xUnit) do estimador ML.NET.
